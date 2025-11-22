@@ -1,0 +1,40 @@
+# AI Agent Engineering Training - Base Requirements
+# Version: 1.0
+# Last Updated: 2025-11-05
+
+# Core Dependencies
+openai>=1.40.0              # OpenAI API client for hosted models
+anthropic>=0.39.0           # Anthropic/Claude API client
+pydantic>=2.7.0             # Schema validation for tool I/O
+python-dotenv>=1.0.0        # Environment variable management
+
+# Memory & Vector Store (Module 2)
+chromadb>=0.4.22            # Vector database for embeddings
+sentence-transformers>=2.5.0 # Local embedding models (optional)
+
+# Web & API Tools (Module 3)
+requests>=2.31.0            # HTTP client for API tools
+httpx>=0.27.0               # Async HTTP client
+
+# Logging & Observability
+structlog>=24.1.0           # Structured logging
+rich>=13.7.0                # Pretty console output
+
+# Testing & Validation
+pytest>=8.0.0               # Testing framework
+pytest-asyncio>=0.23.0      # Async test support
+
+# Local Model Support (Optional - install separately)
+# ollama-python>=0.1.0      # Ollama client (requires Ollama installed)
+# transformers>=4.38.0      # Hugging Face transformers
+# torch>=2.2.0              # PyTorch for local inference
+
+# MCP Support (Module MCP)
+fastapi>=0.110.0            # For building MCP servers
+uvicorn>=0.27.0             # ASGI server
+sse-starlette>=2.0.0        # Server-Sent Events for remote MCP
+
+# Development Tools
+black>=24.2.0               # Code formatting
+ruff>=0.3.0                 # Fast linting
+ipython>=8.22.0             # Interactive shell for debugging

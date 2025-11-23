@@ -222,17 +222,16 @@ Learn to build AI agents with hands-on projects and AI-assisted guidance. Perfec
 
 ## 📅 Release Schedule
 
-**This release (Nov 2025):**
-- ✅ Complete course structure and curriculum
-- ✅ Setup instructions and environment configuration
-- ✅ All module overviews and learning objectives
+**New modules released every Sunday:**
 
-**Future releases (coming soon):**
-- Module solutions and code examples
-- Advanced topics and challenges
-- Community contributions
+- ✅ **Week 0** (Nov 24, 2025): Course structure + environment setup
+- 📅 **Week 1** (Dec 1, 2025): Module 1 complete with solution
+- 📅 **Week 2** (Dec 8, 2025): Module 2 complete with solution
+- 📅 **Week 3** (Dec 15, 2025): Module 3 complete with solution
+- 📅 **Week 4** (Dec 22, 2025): Module 4 complete with solution
+- 📅 **Week 5** (Dec 29, 2025): MCP add-on + course wrap-up
 
-**Watch this repo** ⭐ to get notified of updates!
+**Watch this repo** ⭐ to get notified of weekly releases!
 
 ---
 

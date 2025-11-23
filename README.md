@@ -87,15 +87,16 @@ This course is designed to work with **Claude Code as your AI professor**. Here'
    - Experiment and break things
    - Build understanding, not just code
 
-### Learning Without Claude Code
+### Why Claude Code is Required
 
-Each module contains:
-- `README.md` - Module overview and instructions
-- `CONCEPTS.md` - Core concepts to learn
-- `PROJECT.md` - What you'll build
-- `SOLUTION/` - Reference solution (study after attempting!)
+This course is designed for **AI-assisted learning** - the same way modern engineers actually work:
+- Claude Code acts as your professor and pair programmer
+- You learn concepts by discussing, not just typing
+- Focus on understanding architecture and trade-offs
+- Get unstuck immediately when confused
+- This mirrors real-world AI-assisted development
 
-Work through each module sequentially. Build the projects yourself before looking at solutions.
+**Don't have Claude Code?** [Install it here](https://github.com/anthropics/claude-code) - it's free to use with your own API keys.
 
 ---
 
@@ -213,17 +214,25 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
-## 📅 Weekly Release Schedule
+## 🎁 Holiday Gift - Free AI Agent Course!
 
-**New modules released every Tuesday:**
-- ✅ **Week 0** (Nov 19): Setup + Module 1 instructions
-- 📅 **Week 1** (Nov 26): Module 1 solution + Module 2 instructions
-- 📅 **Week 2** (Dec 3): Module 2 solution + Module 3 instructions
-- 📅 **Week 3** (Dec 10): Module 3 solution + Module 4 instructions
-- 📅 **Week 4** (Dec 17): Module 4 solution + MCP instructions
-- 📅 **Week 5** (Dec 24): MCP solution + Course wrap-up
+**This course is my holiday gift to the developer community.**
 
-**Watch this repo** ⭐ to get notified of new releases!
+Learn to build AI agents with hands-on projects and AI-assisted guidance. Perfect for developers who want to understand how agents really work under the hood.
+
+## 📅 Release Schedule
+
+**This release (Nov 2025):**
+- ✅ Complete course structure and curriculum
+- ✅ Setup instructions and environment configuration
+- ✅ All module overviews and learning objectives
+
+**Future releases (coming soon):**
+- Module solutions and code examples
+- Advanced topics and challenges
+- Community contributions
+
+**Watch this repo** ⭐ to get notified of updates!
 
 ---
 

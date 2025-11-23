@@ -88,7 +88,7 @@ Answer these questions (mentally or in writing):
 
 ## 🎓 How to Use This Module
 
-### With Claude Code (Recommended)
+### Using Claude Code
 
 ```bash
 cd AI-Agent-Engineering-Course
@@ -106,14 +106,7 @@ Claude Code will:
 3. Help you debug and understand
 4. Commit your completed work
 
-### Without Claude Code
-
-1. Read [CONCEPTS.md](CONCEPTS.md) carefully
-2. Read [PROJECT.md](PROJECT.md) for specs
-3. Create `simple_agent.py` yourself
-4. Test it with different queries
-5. Compare with `SOLUTION/` when released
-6. Reflect on what you learned
+This is the recommended approach for this course - you'll learn by discussing concepts and understanding architecture, while Claude Code handles the syntax and boilerplate.
 
 ## 🧪 Testing Your Agent
 

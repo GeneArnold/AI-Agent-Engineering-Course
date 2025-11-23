@@ -145,16 +145,13 @@ npm install -g @anthropic/claude-code
 
 Once setup is complete:
 
-**With Claude Code:**
+**Start learning with Claude Code:**
 ```bash
 claude-code
 # Then say: "Start Module 1"
 ```
 
-**Without Claude Code:**
-- Read [module_1_foundations/README.md](../module_1_foundations/README.md)
-- Work through the concepts and project
-- Check your work against the solution
+Claude Code will guide you through the concepts interactively and help you build your first agent!
 
 ---
 

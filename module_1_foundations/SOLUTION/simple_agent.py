@@ -14,7 +14,8 @@ Key Concepts Demonstrated:
 import os
 import json
 import time
-from datetime import datetime
+from datetime import datetime, UTC
+from typing import cast, Any
 from openai import OpenAI
 
 # ============================================================================
@@ -119,7 +120,7 @@ def log_event(event_type: str, data: dict):
         data: Event data dictionary
     """
     log_entry = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+        "timestamp": datetime.now(UTC).isoformat().replace('+00:00', 'Z'),
         "event_type": event_type,
         **data
     }
@@ -184,8 +185,8 @@ def run_agent(user_query: str) -> str:
         start_time = time.time()
         response = client.chat.completions.create(
             model=MODEL,
-            messages=messages,
-            tools=TOOLS,
+            messages=cast(Any, messages),  # Cast for type checker (educational code uses dicts)
+            tools=cast(Any, TOOLS),  # Cast for type checker
             temperature=TEMPERATURE
         )
         latency = time.time() - start_time
@@ -193,13 +194,14 @@ def run_agent(user_query: str) -> str:
         message = response.choices[0].message
 
         # Log LLM call
+        usage = response.usage
         log_event("llm_call", {
             "iteration": iteration,
             "model": MODEL,
             "temperature": TEMPERATURE,
-            "prompt_tokens": response.usage.prompt_tokens,
-            "completion_tokens": response.usage.completion_tokens,
-            "total_tokens": response.usage.total_tokens,
+            "prompt_tokens": usage.prompt_tokens if usage else 0,
+            "completion_tokens": usage.completion_tokens if usage else 0,
+            "total_tokens": usage.total_tokens if usage else 0,
             "latency_ms": round(latency * 1000, 2),
             "finish_reason": response.choices[0].finish_reason
         })
@@ -208,8 +210,14 @@ def run_agent(user_query: str) -> str:
         if message.tool_calls:
             # LLM requested tool execution
             tool_call = message.tool_calls[0]
-            function_name = tool_call.function.name
-            function_args = json.loads(tool_call.function.arguments)
+
+            # Safely access function attribute (type checker friendly)
+            function = getattr(tool_call, 'function', None)
+            if not function:
+                continue
+
+            function_name = function.name
+            function_args = json.loads(function.arguments)
 
             print(f"🔧 Tool call: {function_name}({function_args})")
 
@@ -230,20 +238,20 @@ def run_agent(user_query: str) -> str:
             })
 
             # Add assistant's tool call to conversation
-            messages.append(message)
+            messages.append(cast(Any, message))
 
             # Add tool result to conversation
-            messages.append({
+            messages.append(cast(Any, {
                 "role": "tool",
                 "tool_call_id": tool_call.id,
                 "content": result
-            })
+            }))
 
             # Continue loop - LLM will process the tool result
 
         else:
             # LLM provided final answer (no tool calls)
-            final_answer = message.content
+            final_answer = message.content or "No response"
             print(f"✅ Final answer: {final_answer}")
 
             # Log completion

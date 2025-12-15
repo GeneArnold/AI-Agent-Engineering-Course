@@ -264,14 +264,14 @@ Learn to build AI agents with hands-on projects and AI-assisted guidance. Perfec
 
 **New modules released every Sunday:**
 
-- ✅ **Week 0** (Nov 24, 2024): Course structure + environment setup
-- ✅ **Week 1** (Dec 1, 2024): Module 1 - Agent Foundations
-- ✅ **Week 2** (Dec 8, 2024): Module 2 - Memory & Context
-- ✅ **Week 3** (Dec 15, 2024): Module 3 - Tools & Registries
-- 📅 **Week 4** (Dec 22, 2024): Module 4 - Multi-Agent Systems
-- 📅 **Week 5** (Dec 29, 2024): Module 5 - LLM as Judge & Evaluation
-- 📅 **Week 6** (Jan 5, 2025): Module 6 - Visual Recognition (Part 1)
-- 📅 **Week 7** (Jan 12, 2025): Module 7 - Visual Recognition (Part 2)
+- ✅ **Week 0** (Nov 24, 2025): Course structure + environment setup
+- ✅ **Week 1** (Dec 1, 2025): Module 1 - Agent Foundations
+- ✅ **Week 2** (Dec 8, 2025): Module 2 - Memory & Context
+- ✅ **Week 3** (Dec 15, 2025): Module 3 - Tools & Registries
+- 📅 **Week 4** (Dec 22, 2025): Module 4 - Multi-Agent Systems
+- 📅 **Week 5** (Dec 29, 2025): Module 5 - LLM as Judge & Evaluation
+- 📅 **Week 6** (Jan 5, 2026): Module 6 - Visual Recognition (Part 1)
+- 📅 **Week 7** (Jan 12, 2026): Module 7 - Visual Recognition (Part 2)
 
 **Watch this repo** ⭐ to get notified of weekly releases!
 

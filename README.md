@@ -2,7 +2,7 @@
 
 **Learn to build AI agents from scratch - designed for hands-on learning with Claude Code**
 
-[![Course Progress](https://img.shields.io/badge/Modules-4%20Core%20%2B%20MCP-blue)]()
+[![Course Progress](https://img.shields.io/badge/Modules-7%20Core-blue)]()
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Made with Claude](https://img.shields.io/badge/Made%20with-Claude%20Code-purple)]()
 
@@ -13,9 +13,11 @@
 By the end of this course, you'll have built:
 - ✅ A **simple agent** with tool calling and structured logging
 - ✅ A **memory-enabled agent** using vector databases (RAG)
-- ✅ A **multi-tool agent** that runs local and cloud models
+- ✅ A **multi-tool agent** with Pydantic schemas and dynamic registries
 - ✅ A **multi-agent system** with planner/worker/critic roles
-- ✅ Custom **MCP servers** for standardized tool interfaces
+- ✅ An **evaluation system** using LLM as judge patterns
+- ✅ A **visual recognition agent** with face detection and embeddings
+- ✅ An **advanced visual agent** with hybrid storage architecture
 
 **No prior agent experience required.** If you can code in Python, you can build agents.
 
@@ -135,17 +137,18 @@ This course is designed for **AI-assisted learning** - the same way modern engin
 
 ---
 
-### **Module 3: Tools & Local Models** (Week 3)
+### **Module 3: Tools & Registries** (Week 3)
 **What you'll learn:**
-- Tool registries and dynamic dispatch
-- Local inference with Ollama
-- Model quantization (GGUF/AWQ)
-- Cost vs quality tradeoffs
+- Pydantic schemas for type-safe tool definitions
+- Dynamic tool registries with decorators
+- Clean dispatch patterns (no if/elif chains)
+- Cost tracking and observability
 
 **What you'll build:**
-- `tool_agent.py` - Multi-tool agent with local/cloud model switching
+- `tool_agent.py` - Multi-tool agent with dynamic registry
+- `comparison_simple_vs_pydantic.py` - Bridge example
 
-**Time:** 4-5 hours
+**Time:** 3-4 hours
 
 ---
 
@@ -154,7 +157,7 @@ This course is designed for **AI-assisted learning** - the same way modern engin
 - Multi-agent orchestration
 - Planner → Worker → Critic pattern
 - Shared state and message passing
-- Evaluation and testing
+- Agent coordination strategies
 
 **What you'll build:**
 - `multi_agent_system.py` - Collaborative agent system
@@ -163,18 +166,55 @@ This course is designed for **AI-assisted learning** - the same way modern engin
 
 ---
 
-### **MCP Add-On Track** (Weeks 3-4)
+### **Module 5: LLM as Judge & Evaluation** (Week 5)
 **What you'll learn:**
-- Model Context Protocol (MCP) fundamentals
-- Building custom MCP servers
-- Local vs remote server patterns
-- Tool standardization
+- LLM as judge pattern
+- Multi-criteria evaluation rubrics
+- Quality scoring and metrics
+- Evaluation frameworks
 
 **What you'll build:**
-- Custom MCP server
-- MCP-powered agent integration
+- `judge_agent.py` - Evaluation system for agent outputs
 
 **Time:** 3-4 hours
+
+---
+
+### **Module 6: Visual Recognition (Part 1)** (Week 6)
+**What you'll learn:**
+- Face detection and recognition
+- Visual embeddings
+- Image-based RAG patterns
+- Multi-modal agents
+
+**What you'll build:**
+- `face_recognition_agent.py` - Face recognition with vector DB
+
+**Time:** 4-5 hours
+
+---
+
+### **Module 7: Visual Recognition (Part 2)** (Week 7)
+**What you'll learn:**
+- Hybrid storage architectures
+- Vector DB + SQLite integration
+- Metadata-rich retrieval
+- Production-grade visual agents
+
+**What you'll build:**
+- `hybrid_recognition_agent.py` - Advanced visual recognition system
+
+**Time:** 4-5 hours
+
+---
+
+### **Advanced Topics** (Optional)
+Explore infrastructure and production topics:
+- **Model Context Protocol (MCP)** - Standardized tool interfaces
+- **Local Models & Quantization** - Ollama, GGUF, cost optimization
+- See `advanced_topics/` for details
+
+**Time:** Varies by topic
 
 ---
 
@@ -224,12 +264,14 @@ Learn to build AI agents with hands-on projects and AI-assisted guidance. Perfec
 
 **New modules released every Sunday:**
 
-- ✅ **Week 0** (Nov 24, 2025): Course structure + environment setup
-- 📅 **Week 1** (Dec 1, 2025): Module 1 complete with solution
-- 📅 **Week 2** (Dec 8, 2025): Module 2 complete with solution
-- 📅 **Week 3** (Dec 15, 2025): Module 3 complete with solution
-- 📅 **Week 4** (Dec 22, 2025): Module 4 complete with solution
-- 📅 **Week 5** (Dec 29, 2025): MCP add-on + course wrap-up
+- ✅ **Week 0** (Nov 24, 2024): Course structure + environment setup
+- ✅ **Week 1** (Dec 1, 2024): Module 1 - Agent Foundations
+- ✅ **Week 2** (Dec 8, 2024): Module 2 - Memory & Context
+- ✅ **Week 3** (Dec 15, 2024): Module 3 - Tools & Registries
+- 📅 **Week 4** (Dec 22, 2024): Module 4 - Multi-Agent Systems
+- 📅 **Week 5** (Dec 29, 2024): Module 5 - LLM as Judge & Evaluation
+- 📅 **Week 6** (Jan 5, 2025): Module 6 - Visual Recognition (Part 1)
+- 📅 **Week 7** (Jan 12, 2025): Module 7 - Visual Recognition (Part 2)
 
 **Watch this repo** ⭐ to get notified of weekly releases!
 

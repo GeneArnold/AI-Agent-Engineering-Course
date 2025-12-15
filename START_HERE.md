@@ -186,9 +186,11 @@ Content releases every Sunday:
 | Week 0 | Nov 24 | Course structure + Setup |
 | Week 1 | Dec 1 | Module 1: Agent Foundations |
 | Week 2 | Dec 8 | Module 2: Memory & Context |
-| Week 3 | Dec 15 | Module 3: Tools & Local Models |
+| Week 3 | Dec 15 | Module 3: Tools & Registries |
 | Week 4 | Dec 22 | Module 4: Multi-Agent Systems |
-| Week 5 | Dec 29 | MCP Add-on: Model Context Protocol |
+| Week 5 | Dec 29 | Module 5: LLM as Judge & Evaluation |
+| Week 6 | Jan 5 | Module 6: Visual Recognition (Part 1) |
+| Week 7 | Jan 12 | Module 7: Visual Recognition (Part 2) |
 
 **Pace yourself!** One module per week is plenty. Deep understanding > speed.
 
@@ -322,19 +324,29 @@ One module per week is enough. Deep understanding > speed.
 **Key Concepts:** Embeddings, RAG, ChromaDB
 **Time:** 1 week
 
-### Module 3: Tools & Local Models
-**What:** Multi-tool agent with local LLM support
-**Key Concepts:** Tool registry, Ollama, quantization
+### Module 3: Tools & Registries
+**What:** Multi-tool agent with dynamic registration and type-safe schemas
+**Key Concepts:** Pydantic schemas, dynamic registries, decorator patterns
 **Time:** 1 week
 
 ### Module 4: Multi-Agent Systems
-**What:** Multiple agents working together
-**Key Concepts:** Coordination, evaluation, orchestration
+**What:** Coordinate multiple specialized agents working together
+**Key Concepts:** Planner-Worker-Critic pattern, shared state, orchestration, message passing
 **Time:** 1 week
 
-### MCP Add-on: Model Context Protocol
-**What:** Use MCP servers for extended capabilities
-**Key Concepts:** MCP architecture, server integration
+### Module 5: LLM as Judge & Evaluation
+**What:** Build evaluation systems to measure agent quality
+**Key Concepts:** Rubric design, LLM as judge, multi-criteria scoring, quality metrics
+**Time:** 1 week
+
+### Module 6: Visual Recognition (Part 1)
+**What:** Apply RAG patterns to image recognition with vector databases
+**Key Concepts:** Image embeddings, multi-modal RAG, face recognition, camera integration
+**Time:** 1 week
+
+### Module 7: Visual Recognition (Part 2)
+**What:** Build production-ready hybrid architecture for visual recognition
+**Key Concepts:** Vector DB + SQLite, hybrid architecture, scalability patterns, relational data
 **Time:** 1 week
 
 ---

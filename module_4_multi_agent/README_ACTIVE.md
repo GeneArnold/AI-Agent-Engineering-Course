@@ -74,13 +74,12 @@ Now dive into the code with Claude Code as your guide.
 
 ### Step 4: Run the Code
 
-#### Option A: Quick Test (No API Key) ⭐ RECOMMENDED
+#### Option A: Quick Test (No API Key)
 
 Test the orchestration logic without API calls:
 
 ```bash
-cd module_4_multi_agent
-source ../venv/bin/activate
+source venv/bin/activate
 python SOLUTION/test_multi_agent_mock.py
 ```
 
@@ -89,8 +88,6 @@ You'll see three test cases:
 2. Success after escalation to Planner
 3. Failure after max attempts
 
-**This tests ALL the multi-agent orchestration logic!** No API key needed.
-
 **Time:** 5 minutes
 
 #### Option B: Full Test (Requires OpenAI API Key)
@@ -98,16 +95,13 @@ You'll see three test cases:
 Run the real multi-agent system:
 
 ```bash
-cd module_4_multi_agent
-source ../venv/bin/activate
+source venv/bin/activate
 python SOLUTION/multi_agent_system.py
 ```
 
 Watch Planner → Worker → Critic coordinate in real-time!
 
 Check logs at: `logs/multi_agent_system.jsonl`
-
-**Note:** Requires valid OpenAI API key with credits. If you get a 403 error, use Option A instead - it verifies the same logic!
 
 **Time:** 10 minutes
 

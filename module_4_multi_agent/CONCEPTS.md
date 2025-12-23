@@ -699,6 +699,186 @@ For educational code, we skip:
 
 ---
 
+## Multi-Agent Systems: Architecture Pattern vs Deployment
+
+### The Conceptual Question
+
+**"Wait... these 'agents' are just Python functions in one file. How is this different from regular modular programming?"**
+
+This is an excellent question that highlights an important distinction!
+
+### What Makes Something a "Multi-Agent System"?
+
+It's **not** about:
+- ❌ Separate processes or servers
+- ❌ Different machines or containers
+- ❌ Network communication
+- ❌ Microservices architecture
+
+It **is** about:
+- ✅ **Specialized roles** - Each agent has distinct responsibilities
+- ✅ **Autonomous decisions** - Each agent uses an LLM to make choices
+- ✅ **Coordination pattern** - Orchestrator manages workflow with escalation
+- ✅ **Shared context** - Agents communicate through state or messages
+
+### Regular Functions vs Agents
+
+**Regular modular programming (deterministic):**
+```python
+def validate_email(email):
+    # Same input → same output, always
+    return re.match(r'^[\w\.-]+@[\w\.-]+\.\w+$', email)
+
+def format_name(name):
+    # Predictable string manipulation
+    return name.strip().title()
+```
+
+**Multi-agent system (non-deterministic):**
+```python
+def planner_agent(task):
+    # LLM makes creative decisions
+    plan = llm(f"Break this into steps: {task}")
+    return plan  # Different output each time!
+
+def worker_agent(plan, history):
+    # LLM learns from past attempts
+    result = llm(f"Execute plan: {plan}. History: {history}")
+    return result  # Adapts based on feedback
+
+def critic_agent(result):
+    # LLM makes subjective judgments
+    approved = llm(f"Is this good quality? {result}")
+    return approved  # Contextual evaluation
+```
+
+**Key difference:** LLMs make autonomous, context-aware decisions in each agent.
+
+### Deployment Options: The Same Pattern, Different Scales
+
+The **architecture pattern** (Planner → Worker → Critic with escalation) stays the same.
+The **deployment** varies based on needs:
+
+#### Option 1: Single File (What We Built)
+```python
+# multi_agent_system.py
+def planner_agent(): ...
+def worker_agent(): ...
+def critic_agent(): ...
+def orchestrator(): ...
+```
+
+**When to use:**
+- Learning and prototyping
+- Simple workflows on one machine
+- All agents use same LLM provider
+- Fast iteration during development
+
+**Example:** Content generation tool for blog posts
+
+---
+
+#### Option 2: Separate Processes (Same Machine)
+```bash
+python planner_service.py &    # Port 5001
+python worker_service.py &     # Port 5002
+python critic_service.py &     # Port 5003
+python orchestrator.py         # Coordinates via HTTP
+```
+
+**When to use:**
+- Different resource needs (CPU vs GPU)
+- Independent scaling of agents
+- Fault isolation (one agent crash doesn't kill system)
+
+**Example:** Video processing where Worker needs GPU, others need CPU
+
+---
+
+#### Option 3: Distributed Services (Different Machines)
+```
+┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+│  Planner    │      │   Worker    │      │   Critic    │
+│  Server 1   │      │   Server 2  │      │   Server 3  │
+│  Claude API │      │  OpenAI API │      │  Local LLM  │
+└─────────────┘      └─────────────┘      └─────────────┘
+       ↑                    ↑                    ↑
+       └────────────────────┴────────────────────┘
+              Orchestrator (Server 4)
+              Message Queue (RabbitMQ)
+```
+
+**When to use:**
+- Different LLM providers for different agents
+- Geographic distribution (data sovereignty)
+- Different teams own different agents
+- Scale to millions of requests
+
+**Example:** Enterprise customer support across regions
+
+---
+
+#### Option 4: MCP Tools (Standardized Interface)
+```python
+orchestrator_tools = [
+    {"type": "mcp_tool", "server": "planner-mcp", "tool": "create_plan"},
+    {"type": "mcp_tool", "server": "worker-mcp", "tool": "execute"},
+    {"type": "mcp_tool", "server": "critic-mcp", "tool": "review"}
+]
+
+# LLM-based orchestrator decides which tool to call
+result = orchestrator_llm(task, tools=orchestrator_tools)
+```
+
+**When to use:**
+- Want LLM to decide orchestration (not Python rules)
+- Agents reused across different workflows
+- Standardized tool interface needed
+
+**Example:** Agentic platform with shared agent pool
+
+---
+
+### Why Did We Build It in One File?
+
+**For learning!**
+
+If we started with:
+- Docker compose files
+- API contracts
+- Service discovery
+- Message queues
+
+You'd be learning **DevOps**, not **multi-agent patterns**.
+
+The single-file version lets you focus on:
+- ✅ When to escalate from Worker to Planner
+- ✅ How to track history so LLMs don't repeat mistakes
+- ✅ Why budget gates matter
+- ✅ Python orchestration vs LLM orchestration
+
+**Once you understand the pattern, deploy it however you want!**
+
+### The Architecture Pattern is What Matters
+
+Whether your agents are:
+- Functions in one file
+- Separate Python processes
+- Distributed microservices
+- MCP tool servers
+
+**The logic stays the same:**
+1. Planner breaks down task
+2. Worker executes with full context
+3. Critic evaluates quality
+4. Orchestrator decides: retry → re-plan → give up
+5. Budget gates prevent runaway costs
+6. History prevents repeated mistakes
+
+**The pattern scales from prototype to production without changing the core logic.**
+
+---
+
 ## Key Takeaways
 
 1. **Multi-agent systems** coordinate specialized agents for complex tasks

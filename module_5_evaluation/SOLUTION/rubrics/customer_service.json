@@ -1,0 +1,58 @@
+{
+  "name": "Customer Service Quality Rubric",
+  "description": "Evaluates customer service responses for helpfulness, professionalism, empathy, and completeness",
+  "version": "1.0",
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "type": "Likert (1=Poor, 2=Fair, 3=Good, 4=Very Good, 5=Excellent)"
+  },
+  "criteria": [
+    {
+      "name": "Helpfulness",
+      "description": "Does the response effectively address the customer's question or problem?",
+      "indicators": [
+        "Directly answers the question asked",
+        "Provides actionable solutions",
+        "Includes relevant details and examples",
+        "Offers next steps if needed"
+      ]
+    },
+    {
+      "name": "Professionalism",
+      "description": "Is the tone professional and appropriate? Is the response well-written?",
+      "indicators": [
+        "Tone is courteous and respectful",
+        "Language is professional (not too casual or formal)",
+        "No spelling or grammar errors",
+        "Response is appropriately formatted"
+      ]
+    },
+    {
+      "name": "Empathy",
+      "description": "Does the response show understanding and care for the customer's situation?",
+      "indicators": [
+        "Acknowledges customer's frustration or concern",
+        "Shows understanding of their situation",
+        "Expresses genuine desire to help",
+        "Tone is warm and human (not robotic)"
+      ]
+    },
+    {
+      "name": "Completeness",
+      "description": "Does the response fully address all aspects of the customer's inquiry?",
+      "indicators": [
+        "All questions are answered",
+        "Doesn't leave obvious gaps",
+        "Provides sufficient detail",
+        "Anticipates follow-up questions"
+      ]
+    }
+  ],
+  "use_cases": [
+    "Evaluating chatbot responses",
+    "Training customer service agents",
+    "Comparing different response strategies",
+    "Quality assurance for support tickets"
+  ]
+}

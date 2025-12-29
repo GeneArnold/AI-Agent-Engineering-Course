@@ -1,0 +1,58 @@
+{
+  "name": "Code Quality Rubric",
+  "description": "Evaluates code for readability, correctness, error handling, and documentation",
+  "version": "1.0",
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "type": "Likert (1=Poor, 2=Fair, 3=Good, 4=Very Good, 5=Excellent)"
+  },
+  "criteria": [
+    {
+      "name": "Correctness",
+      "description": "Does the code correctly solve the problem? Are there bugs or logical errors?",
+      "indicators": [
+        "Handles all specified requirements",
+        "Logic is sound and produces correct results",
+        "Edge cases are handled appropriately",
+        "No obvious bugs or errors"
+      ]
+    },
+    {
+      "name": "Readability",
+      "description": "Is the code easy to understand? Are naming and structure clear?",
+      "indicators": [
+        "Variable and function names are descriptive",
+        "Code structure is logical and organized",
+        "Formatting is consistent",
+        "Complexity is minimized where possible"
+      ]
+    },
+    {
+      "name": "Error Handling",
+      "description": "Does the code handle errors gracefully? Are edge cases considered?",
+      "indicators": [
+        "Invalid inputs are handled",
+        "Error messages are helpful",
+        "Edge cases (empty lists, null values, etc.) are addressed",
+        "Doesn't crash on unexpected input"
+      ]
+    },
+    {
+      "name": "Documentation",
+      "description": "Is the code well-documented? Are docstrings and comments present where needed?",
+      "indicators": [
+        "Function has clear docstring",
+        "Complex logic includes explanatory comments",
+        "Parameters and return values are documented",
+        "Usage examples provided if helpful"
+      ]
+    }
+  ],
+  "use_cases": [
+    "Evaluating coding agent outputs",
+    "Comparing different implementations",
+    "Code review automation",
+    "Teaching code quality principles"
+  ]
+}

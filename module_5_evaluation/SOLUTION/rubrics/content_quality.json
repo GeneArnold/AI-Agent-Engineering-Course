@@ -1,0 +1,58 @@
+{
+  "name": "Content Quality Rubric",
+  "description": "Evaluates written content for clarity, accuracy, engagement, and structure",
+  "version": "1.0",
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "type": "Likert (1=Poor, 2=Fair, 3=Good, 4=Very Good, 5=Excellent)"
+  },
+  "criteria": [
+    {
+      "name": "Clarity",
+      "description": "Is the writing clear and easy to understand? Is the message communicated effectively?",
+      "indicators": [
+        "Ideas are expressed clearly",
+        "Sentences are well-constructed",
+        "Jargon is explained or avoided",
+        "Flow is logical and smooth"
+      ]
+    },
+    {
+      "name": "Accuracy",
+      "description": "Is the information factually correct and well-researched?",
+      "indicators": [
+        "Facts are correct",
+        "Claims are supported",
+        "Technical details are accurate",
+        "No misleading or false information"
+      ]
+    },
+    {
+      "name": "Engagement",
+      "description": "Is the content interesting and engaging? Does it hold the reader's attention?",
+      "indicators": [
+        "Opening is compelling",
+        "Examples are relevant and interesting",
+        "Tone is appropriate for audience",
+        "Content maintains reader interest"
+      ]
+    },
+    {
+      "name": "Structure",
+      "description": "Is the content well-organized? Does it have a clear beginning, middle, and end?",
+      "indicators": [
+        "Clear introduction and conclusion",
+        "Logical progression of ideas",
+        "Appropriate use of headings/sections",
+        "Length is appropriate for topic"
+      ]
+    }
+  ],
+  "use_cases": [
+    "Evaluating blog posts and articles",
+    "Comparing different writing styles",
+    "Content generation quality checks",
+    "Teaching writing principles"
+  ]
+}

@@ -1,0 +1,12 @@
+# Module 6: Face Recognition Agent - CLIP Implementation
+# Minimal dependencies for educational clarity
+
+# CLIP embeddings (via Hugging Face)
+transformers
+torch
+
+# Vector database
+chromadb==1.4.0
+
+# Image processing
+Pillow==10.4.0

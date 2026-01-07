@@ -1,6 +1,6 @@
 # Module 6: Visual Recognition (Part 1)
 
-## 🔒 Releases January 5, 2026 (Week 6)
+## ✅ Now Available! (Week 6)
 
 Apply RAG patterns to image recognition—learn multi-modal RAG using face recognition, image embeddings, and vector databases.
 
@@ -138,13 +138,6 @@ After completing this module, answer:
 - **Deletion**: Provide way to remove someone's face data
 
 **This module teaches the technology responsibly.**
-
-## Coming January 5, 2026
-
-**This module releases in Week 6.** Until then:
-- Complete Modules 1-5
-- Master agent loops, memory, tools, multi-agent, and evaluation
-- Get ready for multi-modal learning!
 
 ---
 
